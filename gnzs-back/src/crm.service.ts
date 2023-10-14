@@ -1,11 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import axios from 'axios';
+import * as dotenv from 'dotenv';
 
 @Injectable()
 export class CrmService {
 
   private accessToken: string;
   private baseDomain: string;
+  private clientId: string;
+
+  constructor() {
+    dotenv.config();
+    this.clientId = process.env.CLIENT_ID;
+  }
 
   getBaseDomain(): string {
     return this.baseDomain;
@@ -14,15 +21,14 @@ export class CrmService {
   getAccessToken(): string {
     return this.accessToken;
   }
-  
+
   async getToken(): Promise<void> {
     const url = 'https://test.gnzs.ru/oauth/get-token.php';
-    const clientId = '31334466'; // need dotenv
 
     try {
       const response = await axios.get(url, {
         headers: {
-          'X-Client-Id': clientId,
+          'X-Client-Id': this.clientId,
         },
       });
 
