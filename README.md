@@ -36,7 +36,6 @@ echo "CLIENT_ID=<ВАШ-id-тут>" > .env
 ```
 **Устанавливаем зависимости и запускаем сервер**
 ```bash
-cd gnzs-back
 npm install
 npm run start:dev
 ```
