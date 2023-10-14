@@ -1,0 +1,47 @@
+.dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+  
+.toggle {
+    font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
+    width: 14rem;
+    height: 3rem;
+    padding: 10px;
+    background-color: #42b983;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+  
+    &:hover {
+      background-color: lighten(#42b983, 5%);
+    }
+}
+  
+.options {
+    font-family: 'Press Start 2P', Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 55%;
+    width: 12rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    z-index: 1;
+    list-style: none;
+  
+    & li {
+      text-align: center;
+      color: #1e1e1e;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 8px;
+    
+      &:hover {
+        background-color: #e6e6e6;
+      }
+    }
+}

@@ -1,0 +1,54 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 38px;
+}
+  
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+li {
+    background: #ccc;
+    width: calc(50% - 20px);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    color: #1e1e1e;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    box-shadow: inset 0px 5px 10px 0px #fff;
+  
+    &:hover {
+      background-color: lighten(#ccc, 5%);
+      box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+    }
+}
+  
+@media screen and (min-width: 1200px) {
+    li {
+      width: calc(25% - 20px);
+    }
+}
+  
+@media screen and (max-width: 1200px) {
+    li {
+      width: calc(33.33% - 20px);
+    }
+}
+  
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    li {
+      width: calc(50% - 20px);
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    li {
+      width: 100%;
+    }
+}
